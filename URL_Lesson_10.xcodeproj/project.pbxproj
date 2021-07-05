@@ -66,20 +66,44 @@
 		3825B65D2681DEA200B9BEF6 /* URL_Lesson_10 */ = {
 			isa = PBXGroup;
 			children = (
+				387B4C2E26933CCF00CA2EC7 /* Model */,
+				387B4C2F26933D1200CA2EC7 /* View */,
+				387B4C3026933D2600CA2EC7 /* Controllers */,
 				3825B65E2681DEA200B9BEF6 /* AppDelegate.swift */,
 				3825B6602681DEA200B9BEF6 /* SceneDelegate.swift */,
-				3825B6722681EBDA00B9BEF6 /* ImageViewController.swift */,
-				3825B6742681ED2500B9BEF6 /* MainViewController.swift */,
-				3825B6762681EE1000B9BEF6 /* CoursesViewController.swift */,
-				389CD27026825BC60007A242 /* Course.swift */,
-				3825B6782681EE8B00B9BEF6 /* UserActionCell.swift */,
-				3825B67A2681EF3100B9BEF6 /* CourseCell.swift */,
-				3825B6642681DEA200B9BEF6 /* Main.storyboard */,
 				3825B6672681DEA500B9BEF6 /* Assets.xcassets */,
-				3825B6692681DEA500B9BEF6 /* LaunchScreen.storyboard */,
 				3825B66C2681DEA500B9BEF6 /* Info.plist */,
 			);
 			path = URL_Lesson_10;
+			sourceTree = "<group>";
+		};
+		387B4C2E26933CCF00CA2EC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3825B6782681EE8B00B9BEF6 /* UserActionCell.swift */,
+				389CD27026825BC60007A242 /* Course.swift */,
+				3825B67A2681EF3100B9BEF6 /* CourseCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		387B4C2F26933D1200CA2EC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3825B6642681DEA200B9BEF6 /* Main.storyboard */,
+				3825B6692681DEA500B9BEF6 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		387B4C3026933D2600CA2EC7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3825B6722681EBDA00B9BEF6 /* ImageViewController.swift */,
+				3825B6742681ED2500B9BEF6 /* MainViewController.swift */,
+				3825B6762681EE1000B9BEF6 /* CoursesViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
