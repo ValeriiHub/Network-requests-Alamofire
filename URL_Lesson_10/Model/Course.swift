@@ -11,6 +11,14 @@ struct Course: Decodable {
     let imageUrl: String?
     let numberOfLessons: Int?
     let numberOfTests: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "Name"
+        case link = "Link"
+        case imageUrl = "ImageUrl"
+        case numberOfLessons = "Number_of_lessons"
+        case numberOfTests = "Number_of_tests"
+    }
 }
 
 struct WebsiteDescription: Decodable {

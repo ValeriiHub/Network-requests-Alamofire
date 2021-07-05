@@ -13,6 +13,7 @@ class CoursesViewController: UITableViewController {
     private let jsonUrlTwo = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
     private let jsonUrlThree = "https://swiftbook.ru//wp-content/uploads/api/api_website_description"
     private let jsonUrlFour = "https://swiftbook.ru//wp-content/uploads/api/api_missing_or_wrong_fields"
+    private let jsonUrlFive = "https://swiftbook.ru//wp-content/uploads/api/api_courses_capital"
     
     private var courses: [Course] = []
     
@@ -106,14 +107,14 @@ class CoursesViewController: UITableViewController {
         }.resume()
     }
     func fetchDataV5() {
-        guard let url = URL(string: jsonUrlTwo) else { return }
+        guard let url = URL(string: jsonUrlFive) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
             
             do {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                //decoder.keyDecodingStrategy = .convertFromSnakeCase
                 self.courses = try decoder.decode([Course].self, from: data)
                 
             } catch let error {
