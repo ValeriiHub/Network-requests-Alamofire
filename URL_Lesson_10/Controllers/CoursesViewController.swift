@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class CoursesViewController: UITableViewController {
 
@@ -122,4 +123,37 @@ class CoursesViewController: UITableViewController {
             }
         }.resume()
     }
+    
+    func fetchDataWithAlamofire() {
+        
+        guard let url = URL(string: jsonUrlTwo) else { return }
+        
+        AF.request(url).validate().responseJSON { dataResponse in
+//            guard let statuseCode = dataResponse.response?.statusCode else { return }
+//            if (200..<300).contains(statuseCode) { // если успешно получили данные
+//                guard let value = dataResponse.value else { return }  // вариант получения данных
+//                print("value:", value)
+//            } else {
+//                guard let error = dataResponse.error else { return }  // вариант получения ошибки
+//                print(error)
+//            }
+            
+            switch dataResponse.result {
+            case .success(let value):
+                
+                self.courses = Course.getCourses(from: value)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+            
+        }
+        
+    }
+    
 }

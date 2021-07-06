@@ -68,6 +68,7 @@
                         <segue destination="axY-fv-DV9" kind="show" identifier="ExampleThree" id="blo-Wn-ywR"/>
                         <segue destination="axY-fv-DV9" kind="show" identifier="ExampleFour" id="yx4-N0-2jE"/>
                         <segue destination="axY-fv-DV9" kind="show" identifier="OurCourses" id="amT-1R-glo"/>
+                        <segue destination="axY-fv-DV9" kind="show" identifier="OurCoursesWithAlamofire" id="cQN-UW-gV9"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGJ-mP-SFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuy-uY-IWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="-248"/>
+            <point key="canvasLocation" x="1929" y="-249"/>
         </scene>
         <!--Courses View Controller-->
         <scene sceneID="Pr2-7T-fRz">
@@ -192,7 +193,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8R-hj-adH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="483"/>
+            <point key="canvasLocation" x="1929" y="481"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7PO-Fy-hDe">
@@ -214,7 +215,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zZc-4v-pKW"/>
+        <segue reference="cQN-UW-gV9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
