@@ -95,12 +95,11 @@ extension MainViewController {
         let userData = [ "course" : "Networking",
                          "lesson" : "GET and POST"]  // словарь который будет передавать
         
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }  // создаем из словаря тело запроса
+        
         var request = URLRequest(url: url)          // создаем URLRequest (запрос)
         request.httpMethod = "POST"
         request.addValue("aplication/json", forHTTPHeaderField: "Content-tipe")
-        
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }                // создаем из словаря тело запроса
-        
         request.httpBody = httpBody                 // присваиваем запросу отконвертированные данные
         
         URLSession.shared.dataTask(with: request) { data, response, _ in
@@ -108,7 +107,7 @@ extension MainViewController {
             print(response)
             
             do {
-                let json = try JSONSerialization.data(withJSONObject: data, options: [])
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
             } catch let error {
                 print(error)
