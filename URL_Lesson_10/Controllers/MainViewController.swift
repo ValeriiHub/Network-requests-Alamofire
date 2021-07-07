@@ -16,6 +16,7 @@ enum UserActons: String, CaseIterable {
     case ourCourses = "Our Courses"
     case postRequest = "POST Request"
     case ourCoursesAlamofire = "Our Courses Alamofire"
+    case postAlamofire = "Post with Alamofire"
 }
 
 class MainViewController: UICollectionViewController {
@@ -58,6 +59,8 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: nil)
         case .postRequest:
             postRequest()
+        case .postAlamofire:
+            performSegue(withIdentifier: "PostAlamofire", sender: nil)
         }
     }
     
@@ -80,6 +83,8 @@ class MainViewController: UICollectionViewController {
                 coursesVC.fetchDataV5()
             case "OurCoursesWithAlamofire":
                 coursesVC.fetchDataWithAlamofire()
+            case "PostAlamofire":
+                coursesVC.postWithAlamofire()
             default:
                 break
             }

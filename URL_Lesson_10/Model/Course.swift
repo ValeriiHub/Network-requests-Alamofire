@@ -9,8 +9,8 @@ struct Course: Decodable {
     let name: String?
     let link: String?
     let imageUrl: String?
-    let numberOfLessons: Int?
-    let numberOfTests: Int?
+    let numberOfLessons: String?
+    let numberOfTests: String?
     
     enum CodingKeys: String, CodingKey {
         case name = "Name"
@@ -24,15 +24,15 @@ struct Course: Decodable {
         name = dictCourse["name"] as? String
         link = dictCourse["link"] as? String
         imageUrl = dictCourse["imageUrl"] as? String
-        numberOfLessons = dictCourse["number_of_lessons"] as? Int
-        numberOfTests = dictCourse["number_of_tests"] as? Int
+        numberOfLessons = dictCourse["number_of_lessons"] as? String
+        numberOfTests = dictCourse["number_of_tests"] as? String
     }
     
     static func getCourses(from jsonData: Any) -> [Course] {
         guard let jsonData = jsonData as? Array<[String : Any]> else { return [] }
         
 //        var courses: [Course] = []
-//        
+//
 //        for dictCourse in jsonData {
 //            let course = Course(dictCourse: dictCourse)
 //            courses.append(course)
